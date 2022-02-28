@@ -1,5 +1,5 @@
 ---
-title: "INFO201 A3-Report"
+title: "Index"
 author: "Ciara Wang"
 date: "2/26/2022"
 output: html_document
@@ -11,78 +11,45 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r, echo=FALSE}
-source("~/Documents/info_hw/a3-ciagzb/source/analysis.R")
+source("../docs/analysis.R ")
 ```
 
-## **Introduction**
+## Introduction
+
 This report aims to analysis the issue of over-policing of individuals of color. I have chosen the population of different race across the United State as the domain of my analysis. Through comparing the different proportion of different races in jail, we could roughly get a sense of the situation across the nation.
 
-## **Summary of Information**
-In order to proceed, I want to find which state has the most black/native/white inmates. By selecting the corresponding column and clean up the data, 
-I found that the state that has the most black jail population is 
-```{r, echo=FALSE}
-print(most_black)
-```
+##Summary of Information
+In order to proceed, I want to find which state has the most black/native/white inmates. By selecting the corresponding column and clean up the data, I found that the state that has the most black jail population is **'most_black'**, the state that has the most white jail population is **'most_white'**, and the state that has the most native jail population is **'most_native'**.   
 
-the state that has the most white jail population is
-```{r, echo=FALSE}
-print(most_white)
-```
-and the state that has the most native jail population is 
-```{r, echo=FALSE}
-print(most_native)
-```
-
-To further the investigation, I look into the bigger picture of the country and to find out regionally, which region has **the most aapi/black/latinx/native/other/white jail population** in the United states. 
+To further the investigation, I look into the bigger picture of the country and to find out regionally, which region has the most aapi/black/latinx/native/other/white jail population in the United states. 
 
 Region that has the most jail population(in race):
-Asian American / Pacific Islander:
-```{r, echo=FALSE}
-print(most_aapi_by_region)
-```
-Black:
-```{r,echo=FALSE}
-print(most_black_by_region)
-```
-Latinx: 
-```{r,echo=FALSE}
-print(most_latinx_by_region)
-```
-Native: 
-```{r,echo=FALSE}
-print(most_native_by_region)
-```
-Other: 
-```{r,echo=FALSE}
-print(most_other_by_region)
-```
-White:
-```{r,echo=FALSE}
-print(most_white_by_region)
-```
+Asian American / Pacific Islander: **'most_aapi_by_region'**
+Black: **'most_black_by_region'**
+Latinx: **'most_latinx_by_region'**
+Native: **'most_native_by_region'**
+Other:  **'most_other_by_region'**
+White: **'most_white_by_region'**
 
-We can see that most of the races I analyze are located at the West, suggesting a potential threat of over-policing existing in the West part of the United States. 
-
-
-## **Charts 1**
+##Charts 1
 The following Chart presents the data that shows the racial change of King County, WA, jail population.
 ```{r KingCounty_racial_change plot, echo=FALSE}
 plot(KingCounty_racial_change)
 ```
 
-## **Chart 2**
+##Chart 2
 The following Chart presents the data that shows the gender change of King County, WA, jail population.
 ```{r KingCounty_gender_change, echo=FALSE} 
 plot(KingCounty_gender_change)
 ```
 
 
-## **Map**
-```{r Black jail population proportion in different state, echo=FALSE}
-Map
+##Map
+```{r Black jail population proportion in different state}
+plot(Map)
 ```
 
-In the above Map, I am trying to present the ratio of Black jail proportion of each state; we can see clearly that on the South-east part of the Unite States, the ratio is much higher than the other regions. This corresponded to what I have calculated the value above, that the southern region has the highest of the black jailed population. Although, one might argue that that could be because of the population distribution difference between the states, this question could be address through analyzing the other race group distribution data. 
+
 
 
 
