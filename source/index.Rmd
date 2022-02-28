@@ -1,0 +1,56 @@
+---
+title: "Index"
+author: "Ciara Wang"
+date: "2/26/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, echo=FALSE}
+source("../docs/analysis.R ")
+```
+
+## Introduction
+
+This report aims to analysis the issue of over-policing of individuals of color. I have chosen the population of different race across the United State as the domain of my analysis. Through comparing the different proportion of different races in jail, we could roughly get a sense of the situation across the nation.
+
+##Summary of Information
+In order to proceed, I want to find which state has the most black/native/white inmates. By selecting the corresponding column and clean up the data, I found that the state that has the most black jail population is **'most_black'**, the state that has the most white jail population is **'most_white'**, and the state that has the most native jail population is **'most_native'**.   
+
+To further the investigation, I look into the bigger picture of the country and to find out regionally, which region has the most aapi/black/latinx/native/other/white jail population in the United states. 
+
+Region that has the most jail population(in race):
+Asian American / Pacific Islander: **'most_aapi_by_region'**
+Black: **'most_black_by_region'**
+Latinx: **'most_latinx_by_region'**
+Native: **'most_native_by_region'**
+Other:  **'most_other_by_region'**
+White: **'most_white_by_region'**
+
+##Charts 1
+The following Chart presents the data that shows the racial change of King County, WA, jail population.
+```{r KingCounty_racial_change plot, echo=FALSE}
+plot(KingCounty_racial_change)
+```
+
+##Chart 2
+The following Chart presents the data that shows the gender change of King County, WA, jail population.
+```{r KingCounty_gender_change, echo=FALSE} 
+plot(KingCounty_gender_change)
+```
+
+
+##Map
+```{r Black jail population proportion in different state}
+plot(Map)
+```
+
+
+
+
+
+
